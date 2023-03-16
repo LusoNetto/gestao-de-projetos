@@ -1,18 +1,126 @@
-body{
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    font-family: sans-serif;
     background-color: black;
 }
+header {
+    display: flex;
+    padding:30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: max-content;
+    border-bottom: 5px solid greenyellow;
+}
+img {
+    height: 150px;
+    border-radius: 100%;
+    border: 5px solid greenyellow;
+}
 h1 {
-    border: 2px solid white;
+    padding:10px;
     border-radius: 8px;
-    padding: 10px;
     color: white;
-    font-size: 8vw;
+    font-size: 45px;
+    cursor: default;
+}
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    height:50vh;
 }
 a {
     text-decoration: none;
-    font-size: 6vw;
+    color: white;
+    background-color: black;
+    padding: 30px;
+    font-size: 20px;
+    animation-name: links;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    border: 5px solid white;
+    transition: 0.5s;
+    border-radius: 25%;
+}
+a:hover {
+    color: greenyellow;
+    border-radius: 30%;
+    scale: 1.2;
+}
+@keyframes links {
+    0%  {border-radius: 25%;border-color: white;}
+    25%  {border-radius: 12%;border-color: greenyellow;}
+    50% {border-radius: 12%;border-color: greenyellow;}
+    100% {border-radius: 25%;border-color: white;}
+  }
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+p {
+    color: white;
+    font-size: 50px;
+}
+@media (max-width: 426px)
+{
+    body {
+        height: 100vh;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    img {
+        height: 200px;
+        border-radius: 100%;
+        border: 5px solid black;
+    }
+    h1 {
+        background-color: black;
+        padding:10px;
+        border-radius: 8px;
+        color: white;
+        font-size: 6vw;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height:30vh;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 5vw;
+        animation-name: links;
+        animation-iteration-count: infinite;
+        animation-duration: 5s;
+        border: 5px solid white;
+        transition: 0.5s;
+        border-radius: 25%;
+    }
+    p {
+        font-size: 10px;
+    }
+    @keyframes links {
+        0%  {border-radius: 25%;border-color: white;}
+        25%  {border-radius: 12%;border-color: greenyellow;}
+        50% {border-radius: 12%;border-color: greenyellow;}
+        100% {border-radius: 25%;border-color: white;}
+      }
 }
